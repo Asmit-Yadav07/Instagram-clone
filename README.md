@@ -1,0 +1,1 @@
+this is a project that contain an instagram clone . i had used html and tailwind css to make it . i tried to make it responsive too. i hade faced many problems but i tried to make it accurately responsive at critical breakpoints. moreover this is my first tailwind css project.
