@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Instagram – Connect with friends, share your moments, and explore a world of photos, videos, and reels. Join the global community today!">
+        <title>Instagram Clone</title>
+        <style>
+            ::-webkit-scrollbar{
+                width: 0px;
+                height: 0px;
+            }
+        </style>
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    </head>
+    <body class="min-h-screen flex flex-col w-full">
+        <main>
+            <div class="h-[62px] w-full bg-black sticky top-0 md:hidden z-[3]  ">
+                <nav class=" list-none text-white p-3  flex  items-center justify-between">
+                    <ul class="flex items-center">
+                        <li class=" md:hidden">
+                            <svg
+                                aria-label="Instagram"
+                                class="x1lliihq x1n2onr6 x5n08af text-white"
+                                fill="currentColor"
+                                height="29"
+                                role="img"
+                                viewBox="32 4 113 32"
+                                width="103"
+                            >
+                                <title>Instagram</title>
+                                <path
+                                    clip-rule="evenodd"
+                                    d="M37.82 4.11c-2.32.97-4.86 3.7-5.66 7.13-1.02 4.34 3.21 6.17 3.56 5.57.4-.7-.76-.94-1-3.2-.3-2.9 1.05-6.16 2.75-7.58.32-.27.3.1.3.78l-.06 14.46c0 3.1-.13 4.07-.36 5.04-.23.98-.6 1.64-.33 1.9.32.28 1.68-.4 2.46-1.5a8.13 8.13 0 0 0 1.33-4.58c.07-2.06.06-5.33.07-7.19 0-1.7.03-6.71-.03-9.72-.02-.74-2.07-1.51-3.03-1.1Zm82.13 14.48a9.42 9.42 0 0 1-.88 3.75c-.85 1.72-2.63 2.25-3.39-.22-.4-1.34-.43-3.59-.13-5.47.3-1.9 1.14-3.35 2.53-3.22 1.38.13 2.02 1.9 1.87 5.16ZM96.8 28.57c-.02 2.67-.44 5.01-1.34 5.7-1.29.96-3 .23-2.65-1.72.31-1.72 1.8-3.48 4-5.64l-.01 1.66Zm-.35-10a10.56 10.56 0 0 1-.88 3.77c-.85 1.72-2.64 2.25-3.39-.22-.5-1.69-.38-3.87-.13-5.25.33-1.78 1.12-3.44 2.53-3.44 1.38 0 2.06 1.5 1.87 5.14Zm-13.41-.02a9.54 9.54 0 0 1-.87 3.8c-.88 1.7-2.63 2.24-3.4-.23-.55-1.77-.36-4.2-.13-5.5.34-1.95 1.2-3.32 2.53-3.2 1.38.14 2.04 1.9 1.87 5.13Zm61.45 1.81c-.33 0-.49.35-.61.93-.44 2.02-.9 2.48-1.5 2.48-.66 0-1.26-1-1.42-3-.12-1.58-.1-4.48.06-7.37.03-.59-.14-1.17-1.73-1.75-.68-.25-1.68-.62-2.17.58a29.65 29.65 0 0 0-2.08 7.14c0 .06-.08.07-.1-.06-.07-.87-.26-2.46-.28-5.79 0-.65-.14-1.2-.86-1.65-.47-.3-1.88-.81-2.4-.2-.43.5-.94 1.87-1.47 3.48l-.74 2.2.01-4.88c0-.5-.34-.67-.45-.7a9.54 9.54 0 0 0-1.8-.37c-.48 0-.6.27-.6.67 0 .05-.08 4.65-.08 7.87v.46c-.27 1.48-1.14 3.49-2.09 3.49s-1.4-.84-1.4-4.68c0-2.24.07-3.21.1-4.83.02-.94.06-1.65.06-1.81-.01-.5-.87-.75-1.27-.85-.4-.09-.76-.13-1.03-.11-.4.02-.67.27-.67.62v.55a3.71 3.71 0 0 0-1.83-1.49c-1.44-.43-2.94-.05-4.07 1.53a9.31 9.31 0 0 0-1.66 4.73c-.16 1.5-.1 3.01.17 4.3-.33 1.44-.96 2.04-1.64 2.04-.99 0-1.7-1.62-1.62-4.4.06-1.84.42-3.13.82-4.99.17-.8.04-1.2-.31-1.6-.32-.37-1-.56-1.99-.33-.7.16-1.7.34-2.6.47 0 0 .05-.21.1-.6.23-2.03-1.98-1.87-2.69-1.22-.42.39-.7.84-.82 1.67-.17 1.3.9 1.91.9 1.91a22.22 22.22 0 0 1-3.4 7.23v-.7c-.01-3.36.03-6 .05-6.95.02-.94.06-1.63.06-1.8 0-.36-.22-.5-.66-.67-.4-.16-.86-.26-1.34-.3-.6-.05-.97.27-.96.65v.52a3.7 3.7 0 0 0-1.84-1.49c-1.44-.43-2.94-.05-4.07 1.53a10.1 10.1 0 0 0-1.66 4.72c-.15 1.57-.13 2.9.09 4.04-.23 1.13-.89 2.3-1.63 2.3-.95 0-1.5-.83-1.5-4.67 0-2.24.07-3.21.1-4.83.02-.94.06-1.65.06-1.81 0-.5-.87-.75-1.27-.85-.42-.1-.79-.13-1.06-.1-.37.02-.63.35-.63.6v.56a3.7 3.7 0 0 0-1.84-1.49c-1.44-.43-2.93-.04-4.07 1.53-.75 1.03-1.35 2.17-1.66 4.7a15.8 15.8 0 0 0-.12 2.04c-.3 1.81-1.61 3.9-2.68 3.9-.63 0-1.23-1.21-1.23-3.8 0-3.45.22-8.36.25-8.83l1.62-.03c.68 0 1.29.01 2.19-.04.45-.02.88-1.64.42-1.84-.21-.09-1.7-.17-2.3-.18-.5-.01-1.88-.11-1.88-.11s.13-3.26.16-3.6c.02-.3-.35-.44-.57-.53a7.77 7.77 0 0 0-1.53-.44c-.76-.15-1.1 0-1.17.64-.1.97-.15 3.82-.15 3.82-.56 0-2.47-.11-3.02-.11-.52 0-1.08 2.22-.36 2.25l3.2.09-.03 6.53v.47c-.53 2.73-2.37 4.2-2.37 4.2.4-1.8-.42-3.15-1.87-4.3-.54-.42-1.6-1.22-2.79-2.1 0 0 .69-.68 1.3-2.04.43-.96.45-2.06-.61-2.3-1.75-.41-3.2.87-3.63 2.25a2.61 2.61 0 0 0 .5 2.66l.15.19c-.4.76-.94 1.78-1.4 2.58-1.27 2.2-2.24 3.95-2.97 3.95-.58 0-.57-1.77-.57-3.43 0-1.43.1-3.58.19-5.8.03-.74-.34-1.16-.96-1.54a4.33 4.33 0 0 0-1.64-.69c-.7 0-2.7.1-4.6 5.57-.23.69-.7 1.94-.7 1.94l.04-6.57c0-.16-.08-.3-.27-.4a4.68 4.68 0 0 0-1.93-.54c-.36 0-.54.17-.54.5l-.07 10.3c0 .78.02 1.69.1 2.09.08.4.2.72.36.91.15.2.33.34.62.4.28.06 1.78.25 1.86-.32.1-.69.1-1.43.89-4.2 1.22-4.31 2.82-6.42 3.58-7.16.13-.14.28-.14.27.07l-.22 5.32c-.2 5.37.78 6.36 2.17 6.36 1.07 0 2.58-1.06 4.2-3.74l2.7-4.5 1.58 1.46c1.28 1.2 1.7 2.36 1.42 3.45-.21.83-1.02 1.7-2.44.86-.42-.25-.6-.44-1.01-.71-.23-.15-.57-.2-.78-.04-.53.4-.84.92-1.01 1.55-.17.61.45.94 1.09 1.22.55.25 1.74.47 2.5.5 2.94.1 5.3-1.42 6.94-5.34.3 3.38 1.55 5.3 3.72 5.3 1.45 0 2.91-1.88 3.55-3.72.18.75.45 1.4.8 1.96 1.68 2.65 4.93 2.07 6.56-.18.5-.69.58-.94.58-.94a3.07 3.07 0 0 0 2.94 2.87c1.1 0 2.23-.52 3.03-2.31.09.2.2.38.3.56 1.68 2.65 4.93 2.07 6.56-.18l.2-.28.05 1.4-1.5 1.37c-2.52 2.3-4.44 4.05-4.58 6.09-.18 2.6 1.93 3.56 3.53 3.69a4.5 4.5 0 0 0 4.04-2.11c.78-1.15 1.3-3.63 1.26-6.08l-.06-3.56a28.55 28.55 0 0 0 5.42-9.44s.93.01 1.92-.05c.32-.02.41.04.35.27-.07.28-1.25 4.84-.17 7.88.74 2.08 2.4 2.75 3.4 2.75 1.15 0 2.26-.87 2.85-2.17l.23.42c1.68 2.65 4.92 2.07 6.56-.18.37-.5.58-.94.58-.94.36 2.2 2.07 2.88 3.05 2.88 1.02 0 2-.42 2.78-2.28.03.82.08 1.49.16 1.7.05.13.34.3.56.37.93.34 1.88.18 2.24.11.24-.05.43-.25.46-.75.07-1.33.03-3.56.43-5.21.67-2.79 1.3-3.87 1.6-4.4.17-.3.36-.35.37-.03.01.64.04 2.52.3 5.05.2 1.86.46 2.96.65 3.3.57 1 1.27 1.05 1.83 1.05.36 0 1.12-.1 1.05-.73-.03-.31.02-2.22.7-4.96.43-1.79 1.15-3.4 1.41-4 .1-.21.15-.04.15 0-.06 1.22-.18 5.25.32 7.46.68 2.98 2.65 3.32 3.34 3.32 1.47 0 2.67-1.12 3.07-4.05.1-.7-.05-1.25-.48-1.25Z"
+                                    fill="currentColor"
+                                    fill-rule="evenodd"
+                                ></path>
+                            </svg>
+                        </li>
+                        <li class="hidden md:hidden ">Home</li>
+                        <li class="hidden md:hidden ">Search</li>
+                        <li class="hidden md:hidden ">Explore</li>
+                        <li class="hidden md:hidden ">Reels</li>
+                        <li class="hidden md:hidden ">Messages</li>
+                        <li class="hidden md:hidden ">Notifications</li>
+                        <li class="hidden md:hidden ">Create</li>
+                        <li class="hidden md:hidden ">Dashboard</li>
+                        <li class="hidden md:hidden ">Profile</li>
+                        <li class="hidden md:hidden ">Thread</li>
+                        <li class="hidden md:hidden ">More</li>
+                        <li class="h-[36px] w-[60vw] md:hidden bg-gray-800 flex items-center px-3 py-4 rounded-md ml-2">
+                            <div class=" flex items-center">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    width="16"
+                                    height="16"
+                                    color="#9b9b9b"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M17.5 17.5L22 22"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                    <path
+                                        d="M20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C15.9706 20 20 15.9706 20 11Z"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="md:hidden">
+                                <input type="text" placeholder="Search" class=" px-3 text-white text-base bg-transparent outline-none">
+                            </div>
+                        </li>
+                        <li class=" ml-[12px] md:hidden">
+                            <svg
+                                aria-label="Like"
+                                class="x1lliihq x1n2onr6 xyb1xck "
+                                fill="currentColor"
+                                height="24"
+                                role="img"
+                                viewBox="0 0 24 24"
+                                width="24"
+                            >
+                                <title>Like</title>
+                                <path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z"></path>
+                            </svg>
+                        </li>
+                    </ul>
+                   
+                </nav>
+            </div>
+            <div class="fixed ">
+                <nav>
+                    <div class=" hidden md:flex md:flex-col bg-black md:h-[100vh]  md:w-[10vw] justify-between items-center border-[0.1px] border-r-gray-800 lg:w-[7.5vw] xl:w-[19vw] xl:pl-7  ">
+                        <div class=" mt-7 xl:ml-[-84px]">
+                            <ul class=" flex flex-col gap-12 xl:gap-10 ">
+                                <li class=" hidden xl:flex xl:mt-4">
+                                    <svg
+                                        aria-label="Instagram"
+                                        class="x1lliihq x1n2onr6 x5n08af text-white"
+                                        fill="currentColor"
+                                        height="29"
+                                        role="img"
+                                        viewBox="32 4 113 32"
+                                        width="103"
+                                    >
+                                        <title>Instagram</title>
+                                        <path
+                                            clip-rule="evenodd"
+                                            d="M37.82 4.11c-2.32.97-4.86 3.7-5.66 7.13-1.02 4.34 3.21 6.17 3.56 5.57.4-.7-.76-.94-1-3.2-.3-2.9 1.05-6.16 2.75-7.58.32-.27.3.1.3.78l-.06 14.46c0 3.1-.13 4.07-.36 5.04-.23.98-.6 1.64-.33 1.9.32.28 1.68-.4 2.46-1.5a8.13 8.13 0 0 0 1.33-4.58c.07-2.06.06-5.33.07-7.19 0-1.7.03-6.71-.03-9.72-.02-.74-2.07-1.51-3.03-1.1Zm82.13 14.48a9.42 9.42 0 0 1-.88 3.75c-.85 1.72-2.63 2.25-3.39-.22-.4-1.34-.43-3.59-.13-5.47.3-1.9 1.14-3.35 2.53-3.22 1.38.13 2.02 1.9 1.87 5.16ZM96.8 28.57c-.02 2.67-.44 5.01-1.34 5.7-1.29.96-3 .23-2.65-1.72.31-1.72 1.8-3.48 4-5.64l-.01 1.66Zm-.35-10a10.56 10.56 0 0 1-.88 3.77c-.85 1.72-2.64 2.25-3.39-.22-.5-1.69-.38-3.87-.13-5.25.33-1.78 1.12-3.44 2.53-3.44 1.38 0 2.06 1.5 1.87 5.14Zm-13.41-.02a9.54 9.54 0 0 1-.87 3.8c-.88 1.7-2.63 2.24-3.4-.23-.55-1.77-.36-4.2-.13-5.5.34-1.95 1.2-3.32 2.53-3.2 1.38.14 2.04 1.9 1.87 5.13Zm61.45 1.81c-.33 0-.49.35-.61.93-.44 2.02-.9 2.48-1.5 2.48-.66 0-1.26-1-1.42-3-.12-1.58-.1-4.48.06-7.37.03-.59-.14-1.17-1.73-1.75-.68-.25-1.68-.62-2.17.58a29.65 29.65 0 0 0-2.08 7.14c0 .06-.08.07-.1-.06-.07-.87-.26-2.46-.28-5.79 0-.65-.14-1.2-.86-1.65-.47-.3-1.88-.81-2.4-.2-.43.5-.94 1.87-1.47 3.48l-.74 2.2.01-4.88c0-.5-.34-.67-.45-.7a9.54 9.54 0 0 0-1.8-.37c-.48 0-.6.27-.6.67 0 .05-.08 4.65-.08 7.87v.46c-.27 1.48-1.14 3.49-2.09 3.49s-1.4-.84-1.4-4.68c0-2.24.07-3.21.1-4.83.02-.94.06-1.65.06-1.81-.01-.5-.87-.75-1.27-.85-.4-.09-.76-.13-1.03-.11-.4.02-.67.27-.67.62v.55a3.71 3.71 0 0 0-1.83-1.49c-1.44-.43-2.94-.05-4.07 1.53a9.31 9.31 0 0 0-1.66 4.73c-.16 1.5-.1 3.01.17 4.3-.33 1.44-.96 2.04-1.64 2.04-.99 0-1.7-1.62-1.62-4.4.06-1.84.42-3.13.82-4.99.17-.8.04-1.2-.31-1.6-.32-.37-1-.56-1.99-.33-.7.16-1.7.34-2.6.47 0 0 .05-.21.1-.6.23-2.03-1.98-1.87-2.69-1.22-.42.39-.7.84-.82 1.67-.17 1.3.9 1.91.9 1.91a22.22 22.22 0 0 1-3.4 7.23v-.7c-.01-3.36.03-6 .05-6.95.02-.94.06-1.63.06-1.8 0-.36-.22-.5-.66-.67-.4-.16-.86-.26-1.34-.3-.6-.05-.97.27-.96.65v.52a3.7 3.7 0 0 0-1.84-1.49c-1.44-.43-2.94-.05-4.07 1.53a10.1 10.1 0 0 0-1.66 4.72c-.15 1.57-.13 2.9.09 4.04-.23 1.13-.89 2.3-1.63 2.3-.95 0-1.5-.83-1.5-4.67 0-2.24.07-3.21.1-4.83.02-.94.06-1.65.06-1.81 0-.5-.87-.75-1.27-.85-.42-.1-.79-.13-1.06-.1-.37.02-.63.35-.63.6v.56a3.7 3.7 0 0 0-1.84-1.49c-1.44-.43-2.93-.04-4.07 1.53-.75 1.03-1.35 2.17-1.66 4.7a15.8 15.8 0 0 0-.12 2.04c-.3 1.81-1.61 3.9-2.68 3.9-.63 0-1.23-1.21-1.23-3.8 0-3.45.22-8.36.25-8.83l1.62-.03c.68 0 1.29.01 2.19-.04.45-.02.88-1.64.42-1.84-.21-.09-1.7-.17-2.3-.18-.5-.01-1.88-.11-1.88-.11s.13-3.26.16-3.6c.02-.3-.35-.44-.57-.53a7.77 7.77 0 0 0-1.53-.44c-.76-.15-1.1 0-1.17.64-.1.97-.15 3.82-.15 3.82-.56 0-2.47-.11-3.02-.11-.52 0-1.08 2.22-.36 2.25l3.2.09-.03 6.53v.47c-.53 2.73-2.37 4.2-2.37 4.2.4-1.8-.42-3.15-1.87-4.3-.54-.42-1.6-1.22-2.79-2.1 0 0 .69-.68 1.3-2.04.43-.96.45-2.06-.61-2.3-1.75-.41-3.2.87-3.63 2.25a2.61 2.61 0 0 0 .5 2.66l.15.19c-.4.76-.94 1.78-1.4 2.58-1.27 2.2-2.24 3.95-2.97 3.95-.58 0-.57-1.77-.57-3.43 0-1.43.1-3.58.19-5.8.03-.74-.34-1.16-.96-1.54a4.33 4.33 0 0 0-1.64-.69c-.7 0-2.7.1-4.6 5.57-.23.69-.7 1.94-.7 1.94l.04-6.57c0-.16-.08-.3-.27-.4a4.68 4.68 0 0 0-1.93-.54c-.36 0-.54.17-.54.5l-.07 10.3c0 .78.02 1.69.1 2.09.08.4.2.72.36.91.15.2.33.34.62.4.28.06 1.78.25 1.86-.32.1-.69.1-1.43.89-4.2 1.22-4.31 2.82-6.42 3.58-7.16.13-.14.28-.14.27.07l-.22 5.32c-.2 5.37.78 6.36 2.17 6.36 1.07 0 2.58-1.06 4.2-3.74l2.7-4.5 1.58 1.46c1.28 1.2 1.7 2.36 1.42 3.45-.21.83-1.02 1.7-2.44.86-.42-.25-.6-.44-1.01-.71-.23-.15-.57-.2-.78-.04-.53.4-.84.92-1.01 1.55-.17.61.45.94 1.09 1.22.55.25 1.74.47 2.5.5 2.94.1 5.3-1.42 6.94-5.34.3 3.38 1.55 5.3 3.72 5.3 1.45 0 2.91-1.88 3.55-3.72.18.75.45 1.4.8 1.96 1.68 2.65 4.93 2.07 6.56-.18.5-.69.58-.94.58-.94a3.07 3.07 0 0 0 2.94 2.87c1.1 0 2.23-.52 3.03-2.31.09.2.2.38.3.56 1.68 2.65 4.93 2.07 6.56-.18l.2-.28.05 1.4-1.5 1.37c-2.52 2.3-4.44 4.05-4.58 6.09-.18 2.6 1.93 3.56 3.53 3.69a4.5 4.5 0 0 0 4.04-2.11c.78-1.15 1.3-3.63 1.26-6.08l-.06-3.56a28.55 28.55 0 0 0 5.42-9.44s.93.01 1.92-.05c.32-.02.41.04.35.27-.07.28-1.25 4.84-.17 7.88.74 2.08 2.4 2.75 3.4 2.75 1.15 0 2.26-.87 2.85-2.17l.23.42c1.68 2.65 4.92 2.07 6.56-.18.37-.5.58-.94.58-.94.36 2.2 2.07 2.88 3.05 2.88 1.02 0 2-.42 2.78-2.28.03.82.08 1.49.16 1.7.05.13.34.3.56.37.93.34 1.88.18 2.24.11.24-.05.43-.25.46-.75.07-1.33.03-3.56.43-5.21.67-2.79 1.3-3.87 1.6-4.4.17-.3.36-.35.37-.03.01.64.04 2.52.3 5.05.2 1.86.46 2.96.65 3.3.57 1 1.27 1.05 1.83 1.05.36 0 1.12-.1 1.05-.73-.03-.31.02-2.22.7-4.96.43-1.79 1.15-3.4 1.41-4 .1-.21.15-.04.15 0-.06 1.22-.18 5.25.32 7.46.68 2.98 2.65 3.32 3.34 3.32 1.47 0 2.67-1.12 3.07-4.05.1-.7-.05-1.25-.48-1.25Z"
+                                            fill="currentColor"
+                                            fill-rule="evenodd"
+                                        ></path>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <div class="x9f619 xxk0z11 xii2z7h x11xpdln x19c4wfv xvy4d1p">
+                                        <svg
+                                            aria-label="Instagram"
+                                            class="x1lliihq x1n2onr6 x5n08af text-white lg:h-6 lg:mt-3 xl:hidden"
+                                            fill="currentColor"
+                                            height="24"
+                                            role="img"
+                                            viewBox="0 0 24 24"
+                                            width="24"
+                                        >
+                                            <title>Instagram</title>>
+                                            <path d="M12 2.982c2.937 0 3.285.011 4.445.064a6.087 6.087 0 0 1 2.042.379 3.408 3.408 0 0 1 1.265.823 3.408 3.408 0 0 1 .823 1.265 6.087 6.087 0 0 1 .379 2.042c.053 1.16.064 1.508.064 4.445s-.011 3.285-.064 4.445a6.087 6.087 0 0 1-.379 2.042 3.643 3.643 0 0 1-2.088 2.088 6.087 6.087 0 0 1-2.042.379c-1.16.053-1.508.064-4.445.064s-3.285-.011-4.445-.064a6.087 6.087 0 0 1-2.043-.379 3.408 3.408 0 0 1-1.264-.823 3.408 3.408 0 0 1-.823-1.265 6.087 6.087 0 0 1-.379-2.042c-.053-1.16-.064-1.508-.064-4.445s.011-3.285.064-4.445a6.087 6.087 0 0 1 .379-2.042 3.408 3.408 0 0 1 .823-1.265 3.408 3.408 0 0 1 1.265-.823 6.087 6.087 0 0 1 2.042-.379c1.16-.053 1.508-.064 4.445-.064M12 1c-2.987 0-3.362.013-4.535.066a8.074 8.074 0 0 0-2.67.511 5.392 5.392 0 0 0-1.949 1.27 5.392 5.392 0 0 0-1.269 1.948 8.074 8.074 0 0 0-.51 2.67C1.012 8.638 1 9.013 1 12s.013 3.362.066 4.535a8.074 8.074 0 0 0 .511 2.67 5.392 5.392 0 0 0 1.27 1.949 5.392 5.392 0 0 0 1.948 1.269 8.074 8.074 0 0 0 2.67.51C8.638 22.988 9.013 23 12 23s3.362-.013 4.535-.066a8.074 8.074 0 0 0 2.67-.511 5.625 5.625 0 0 0 3.218-3.218 8.074 8.074 0 0 0 .51-2.67C22.988 15.362 23 14.987 23 12s-.013-3.362-.066-4.535a8.074 8.074 0 0 0-.511-2.67 5.392 5.392 0 0 0-1.27-1.949 5.392 5.392 0 0 0-1.948-1.269 8.074 8.074 0 0 0-2.67-.51C15.362 1.012 14.987 1 12 1Zm0 5.351A5.649 5.649 0 1 0 17.649 12 5.649 5.649 0 0 0 12 6.351Zm0 9.316A3.667 3.667 0 1 1 15.667 12 3.667 3.667 0 0 1 12 15.667Zm5.872-10.859a1.32 1.32 0 1 0 1.32 1.32 1.32 1.32 0 0 0-1.32-1.32Z"></path>
+                                        </svg>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <svg
+                                        aria-label="Home"
+                                        class="x1lliihq x1n2onr6 x5n08af text-white mt-4 lg:h-6 xl:mt-[-27px]"
+                                        fill="currentColor"
+                                        height="24"
+                                        role="img"
+                                        viewBox="0 0 24 24"
+                                        width="24"
+                                    >
+                                        <title>Home</title>
+                                        <path d="M22 23h-6.001a1 1 0 0 1-1-1v-5.455a2.997 2.997 0 1 0-5.993 0V22a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V11.543a1.002 1.002 0 0 1 .31-.724l10-9.543a1.001 1.001 0 0 1 1.38 0l10 9.543a1.002 1.002 0 0 1 .31.724V22a1 1 0 0 1-1 1Z"></path>
+                                    </svg>
+                                    <p class="text-white mt-[-25px] ml-4 hidden xl:flex">Home</p>
+                                </li>
+                                <li class="flex">
+                                    <svg
+                                        aria-label="Explore"
+                                        class="x1lliihq x1n2onr6 x5n08af text-white lg:h-6"
+                                        fill="currentColor"
+                                        height="24"
+                                        role="img"
+                                        viewBox="0 0 24 24"
+                                        width="24"
+                                    >
+                                        <title>Explore</title>
+                                        <path
+                                            d="M19 10.5A8.5 8.5 0 1 1 10.5 2a8.5 8.5 0 0 1 8.5 8.5Z"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                        ></path>
+                                        <line
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            x1="16.511"
+                                            x2="22"
+                                            y1="16.511"
+                                            y2="22"
+                                        ></line>
+                                    </svg>
+                                    <p class="text-white  ml-4 md:hidden xl:flex">Explore</p>
+                                </li>
+                                <li class="flex">
+                                    <svg
+                                        aria-label="Reels"
+                                        class="x1lliihq x1n2onr6 x5n08af text-white lg:h-6"
+                                        fill="currentColor"
+                                        height="24"
+                                        role="img"
+                                        viewBox="0 0 24 24"
+                                        width="24"
+                                    >
+                                        <title>Reels</title>
+                                        <line
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            x1="2.049"
+                                            x2="21.95"
+                                            y1="7.002"
+                                            y2="7.002"
+                                        ></line>
+                                        <line
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            x1="13.504"
+                                            x2="16.362"
+                                            y1="2.001"
+                                            y2="7.002"
+                                        ></line>
+                                        <line
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            x1="7.207"
+                                            x2="10.002"
+                                            y1="2.11"
+                                            y2="7.002"
+                                        ></line>
+                                        <path
+                                            d="M2 12.001v3.449c0 2.849.698 4.006 1.606 4.945.94.908 2.098 1.607 4.946 1.607h6.896c2.848 0 4.006-.699 4.946-1.607.908-.939 1.606-2.096 1.606-4.945V8.552c0-2.848-.698-4.006-1.606-4.945C19.454 2.699 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.546 2 5.704 2 8.552Z"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                        ></path>
+                                        <path d="M9.763 17.664a.908.908 0 0 1-.454-.787V11.63a.909.909 0 0 1 1.364-.788l4.545 2.624a.909.909 0 0 1 0 1.575l-4.545 2.624a.91.91 0 0 1-.91 0Z" fill-rule="evenodd"></path>
+                                    </svg>
+                                    <p class="text-white  ml-4 md:hidden xl:flex">Reels</p>
+                                </li>
+                                <li class="flex">
+                                    <svg
+                                        aria-label="Messenger"
+                                        class="x1lliihq x1n2onr6 x5n08af text-white lg:h-6"
+                                        fill="currentColor"
+                                        height="24"
+                                        role="img"
+                                        viewBox="0 0 24 24"
+                                        width="24"
+                                    >
+                                        <title>Messenger</title>
+                                        <path
+                                            d="M12.003 2.001a9.705 9.705 0 1 1 0 19.4 10.876 10.876 0 0 1-2.895-.384.798.798 0 0 0-.533.04l-1.984.876a.801.801 0 0 1-1.123-.708l-.054-1.78a.806.806 0 0 0-.27-.569 9.49 9.49 0 0 1-3.14-7.175 9.65 9.65 0 0 1 10-9.7Z"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-miterlimit="10"
+                                            stroke-width="1.739"
+                                        ></path>
+                                        <path d="M17.79 10.132a.659.659 0 0 0-.962-.873l-2.556 2.05a.63.63 0 0 1-.758.002L11.06 9.47a1.576 1.576 0 0 0-2.277.42l-2.567 3.98a.659.659 0 0 0 .961.875l2.556-2.049a.63.63 0 0 1 .759-.002l2.452 1.84a1.576 1.576 0 0 0 2.278-.42Z" fill-rule="evenodd"></path>
+                                    </svg>
+                                    <p class="text-white ml-4 md:hidden xl:flex">Messages</p>
+                                </li>
+                                <li class="flex">
+                                    <svg
+                                        class=" text-white lg:h-6"
+                                        aria-label="Like"
+                                        class="x1lliihq x1n2onr6 xyb1xck"
+                                        fill="currentColor"
+                                        height="24"
+                                        role="img"
+                                        viewBox="0 0 24 24"
+                                        width="24"
+                                    >
+                                        <title>Like</title>
+                                        <path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z"></path>
+                                    </svg>
+                                    <p class="text-white ml-4 md:hidden xl:flex">Notifications</p>
+                                </li>
+                                <li class="flex">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQvVahWtJONHK4s5wrzZqd-p8QD-4lPUv1qQ&s" alt="404 error" class=" h-[3vh] w-[5vw] rounded-[50%] lg:h-[4vh] lg:w-[2.5vw]">
+                                    <p class="text-white mt-1 ml-4 md:hidden xl:flex" >Profile</p>
+                                </li> 
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="mb-9 ">
+                                <li class="flex xl:ml-[-110px] md:hidden xl:flex"><div class="x9f619 xxk0z11 xii2z7h x11xpdln x19c4wfv xvy4d1p mb-8"><svg aria-label="" class="x1lliihq x1n2onr6 x5n08af text-white lg:hidden xl:flex lg:h-6" fill="currentColor" height="18" role="img" viewBox="0 0 192 192" width="24"><title></title><path class="xcslo1z" d="M141.537 88.9883C140.71 88.5919 139.87 88.2104 139.019 87.8451C137.537 60.5382 122.616 44.905 97.5619 44.745C97.4484 44.7443 97.3355 44.7443 97.222 44.7443C82.2364 44.7443 69.7731 51.1409 62.102 62.7807L75.881 72.2328C81.6116 63.5383 90.6052 61.6848 97.2286 61.6848C97.3051 61.6848 97.3819 61.6848 97.4576 61.6855C105.707 61.7381 111.932 64.1366 115.961 68.814C118.893 72.2193 120.854 76.925 121.825 82.8638C114.511 81.6207 106.601 81.2385 98.145 81.7233C74.3247 83.0954 59.0111 96.9879 60.0396 116.292C60.5615 126.084 65.4397 134.508 73.775 140.011C80.8224 144.663 89.899 146.938 99.3323 146.423C111.79 145.74 121.563 140.987 128.381 132.296C133.559 125.696 136.834 117.143 138.28 106.366C144.217 109.949 148.617 114.664 151.047 120.332C155.179 129.967 155.42 145.8 142.501 158.708C131.182 170.016 117.576 174.908 97.0135 175.059C74.2042 174.89 56.9538 167.575 45.7381 153.317C35.2355 139.966 29.8077 120.682 29.6052 96C29.8077 71.3178 35.2355 52.0336 45.7381 38.6827C56.9538 24.4249 74.2039 17.11 97.0132 16.9405C119.988 17.1113 137.539 24.4614 149.184 38.788C154.894 45.8136 159.199 54.6488 162.037 64.9503L178.184 60.6422C174.744 47.9622 169.331 37.0357 161.965 27.974C147.036 9.60668 125.202 0.195148 97.0695 0H96.9569C68.8816 0.19447 47.2921 9.6418 32.7883 28.0793C19.8819 44.4864 13.2244 67.3157 13.0007 95.9325L13 96L13.0007 96.0675C13.2244 124.684 19.8819 147.514 32.7883 163.921C47.2921 182.358 68.8816 191.806 96.9569 192H97.0695C122.03 191.827 139.624 185.292 154.118 170.811C173.081 151.866 172.51 128.119 166.26 113.541C161.776 103.087 153.227 94.5962 141.537 88.9883ZM98.4405 129.507C88.0005 130.095 77.1544 125.409 76.6196 115.372C76.2232 107.93 81.9158 99.626 99.0812 98.6368C101.047 98.5234 102.976 98.468 104.871 98.468C111.106 98.468 116.939 99.0737 122.242 100.233C120.264 124.935 108.662 128.946 98.4405 129.507Z"></path></svg></div>
+                                    <p class="text-white  ml-4 md:hidden xl:flex">Threads</p>
+                                </li>
+                                <li class="flex xl:ml-[-110px]"><div class="x9f619 xjbqb8w x78zum5 x168nmei x13lgxp2 x5pf9jr xo71vjh x1n2onr6 x1plvlek xryxfnj x1c4vz4f x2lah0s xdt5ytf xqjyukv x1qjc9v5 x1oa3qoh x1nhvcw1"><div class="x9f619 xxk0z11 xii2z7h x11xpdln x19c4wfv xvy4d1p"><svg aria-label="Settings" class="x1lliihq x1n2onr6 x5n08af text-white lg:h-6" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Settings</title><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="3" x2="21" y1="4" y2="4"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="3" x2="21" y1="12" y2="12"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="3" x2="21" y1="20" y2="20"></line></svg></div></div>
+                                    <p class="text-white ml-4 md:hidden xl:flex">More</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </nav>
+            </div>
+            <section class=" overflow-x-auto whitespace-nowrap bg-black md:ml-[77px] md:pt-2 md:pb-2 md:bg-gray-950 border-b border-gray-700 lg:ml-[77px] xl:ml-[19vw]">
+                <span class="relative inline-block rounded-full p-[3px] bg-gradient-to-r from-yellow-600 via-pink-600 to-purple-700 md:ml-4">
+                    <img src="data:image/jpeg;base64,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" alt="404 error" class=" h-[6vh] rounded-[50%] md:h-[8vh] lg:h-[8vh] ">
+                    
+                </span>
+                <span class="relative inline-block rounded-full p-[3px] bg-gradient-to-r from-yellow-600 via-pink-600 to-purple-700 md:ml-1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS--M8Sdn4eBEsPwCF79YpVdSvL8fmczI701w&s" alt="404 error" class=" h-[6vh] rounded-[50%] object-cover  md:h-[8vh] lg:h-[8vh]">
+                </span>
+                <span class="relative inline-block rounded-full p-[3px] bg-gradient-to-r from-yellow-600 via-pink-600 to-purple-700 md:ml-1">
+                    <img src="data:image/jpeg;base64,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" alt="404 error" class=" h-[6vh] rounded-[50%] md:h-[8vh] lg:h-[8vh] ">
+                </span>
+                <span class="relative inline-block rounded-full p-[3px] bg-gradient-to-r from-yellow-600 via-pink-600 to-purple-700 md:ml-1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS--M8Sdn4eBEsPwCF79YpVdSvL8fmczI701w&s" alt="404 error" class=" h-[6vh] rounded-[50%] md:h-[8vh] lg:h-[8vh] ">
+                </span>
+                <span class="relative inline-block rounded-full p-[3px] bg-gradient-to-r from-yellow-600 via-pink-600 to-purple-700 md:ml-1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS--M8Sdn4eBEsPwCF79YpVdSvL8fmczI701w&s" alt="404 error" class=" h-[6vh] rounded-[50%] md:h-[8vh] lg:h-[8vh] ">
+                </span>
+                <span class="relative inline-block rounded-full p-[3px] bg-gradient-to-r from-yellow-600 via-pink-600 to-purple-700 md:ml-1">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAM1BMVEXk5ueutLeqsbTn6eqpr7PJzc/j5ebf4eLZ3N2wtrnBxsjN0NLGysy6v8HT1tissra8wMNxTKO9AAAFDklEQVR4nO2d3XqDIAxAlfivoO//tEOZWzvbVTEpic252W3PF0gAIcsyRVEURVEURVEURVEURVEURVEURVEURVEURVEURflgAFL/AirAqzXO9R7XNBVcy9TbuMHmxjN6lr92cNVVLKEurVfK/zCORVvW8iUBnC02dj+Wpu0z0Y6QlaN5phcwZqjkOkK5HZyPAjkIjSO4fIdfcOwFKkJlX4zPu7Ha1tIcwR3wWxyFhRG6g4Je0YpSPDJCV8a2Sv2zd1O1x/2WMDZCwljH+clRrHfWCLGK8REMiql//2si5+DKWKcWeAGcFMzzNrXC/0TUwQ2s6+LhlcwjTMlYsUIQzPOCb7YBiyHopyLXIEKPEkI/TgeuiidK/R9FniUDOjRDpvm0RhqjMyyXNjDhCfIMYl1gGjIMIuYsnGEYRMRZOMMunaLVwpWRW008v6fYKDIzxCwVAeNSO90BJW6emelYBRF/kHpYGVaoxTDAaxOFsfP9y8hpJ4xd7gOcij7JNGQ1EYFgkPJa1jQEiYZXRaRINKxSDUW9n+FT82lSKadkiru9/4XPqSLWOekGPoY05TAvLm9orm+YWuwHoBHkZKijNBJGmeb61eL6Ff/6q7bLr7yvv3vKGhpDRjvgjGaPz+gUg6YgcvpyAR2FIZ9U6nEEyZRTovmEU32KichpGn7C17XrfyH9gK/c0CMP05HZIM2uf9sEveizKveBy9/6Qt7o89ne33D525cfcIMW6ab+TMEukQbQbu+xu7X3A9bChmWaCeAkG17bpntwXgWxHaMzGPmUaR5dQZiKqRVeUZ3047fi3nAu28h4CHxCsZAgmEH8Y27jJAhm8c+5RQzRQNVGhVFSfxOYIjp/pP7RxzjevYXVGf4eLt+BJ1vCuLuLkrgABgCGXZ2wik5uty+oBvNirI6mkzhAf4Gsb58Hcm67Jzd+KwD10BYPLL3e0MjvKrgAULnOfveF/O4N2Xb9BZom3gJes3F9X5Zze8/6Yt09b4CrqsEjUv8oFBaR2rl+6CZr2xVrp24o/WitBKuGrrpl1+bFkmK2qXTON4VpbdfLa7o7y/WdLxG7lm2Lqh2clOwTegbvc/vj2U78CwhA87Bn8G5Nk3eOb0Nsr9flz3sG78UUtue4kpv1xvjg3TMay62BMlTlP+vrOMnJsRmt/ze0jsfkPPYdAH57hK+34PeOyc8XIXu5xT2HsUkdZz+adwg8HGFfQ3K5jtDvbUiO4Di9/ywHGrL88pDizZ++oTp+an+SMX/ndymUCwmHMdO7yuOx83pUx/eEMU0AvxWndwgidAqOZ8ypCwdEfvvEo6D9HwpA8wzvmOJEqAg9ySu8g4x0Hb9hSB/BANEKJ+LbPBU0lzbAJs4xt1AoshKkUGQmiH8/jJ0gdhTTLmSegHlPE0oOdXALnqDjKYh3px//fSgSWG8UqfrrIICzYYSJXRr9BSPbpNzw7gBjKjKOYI7ReIGqQRIap5+5MdjyvuDkExvGeXSlONWZAP3/AZBwJohU7QJRGU+cTVH18ELmRPNBmibW6MT/k1b0XhdkRBvyT6SB6EYv/GvhSmRNpGngRULsAlxMCGNXp7w3FfdEbTEEDdLI9TdIKRUzUesa3I461ER8cpNT7gMRhpKmYVS9ELOgCUQsa4SsulciKiLbY+AnHD8cpuhISsnxpamI84sbDq9qYJgf8wiiOBrC7Ml7M7ZECCqKoiiKoiiKoiiKoijv5AvJxlZRyNWWLwAAAABJRU5ErkJggg==" alt="404 error" class=" h-[6vh] rounded-[50%] md:h-[8vh] lg:h-[8vh] ">
+                </span>
+                <span class="relative inline-block rounded-full p-[3px] bg-gradient-to-r from-yellow-600 via-pink-600 to-purple-700 md:ml-1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRODzIoLcMnoD8WHRk_pOQT6XqEcKnKd1dNlw&s" alt="404 error" class=" h-[6vh] rounded-[50%] md:h-[8vh] lg:h-[8vh] ">
+                </span>
+                <span class="relative inline-block rounded-full p-[3px] bg-gradient-to-r from-yellow-600 via-pink-600 to-purple-700 md:ml-1">
+                    <img src="data:image/jpeg;base64,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" alt="404 error" class=" h-[6vh] rounded-[50%] md:h-[8vh] lg:h-[8vh] ">
+                </span>
+                <span class="relative inline-block rounded-full p-[3px] bg-gradient-to-r from-yellow-600 via-pink-600 to-purple-700 md:ml-1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRODzIoLcMnoD8WHRk_pOQT6XqEcKnKd1dNlw&s" alt="404 error" class=" h-[6vh] rounded-[50%] md:h-[8vh] lg:h-[8vh] ">
+                </span>
+                <span class="relative inline-block rounded-full p-[3px] bg-gradient-to-r from-yellow-600 via-pink-600 to-purple-700 md:ml-1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzHMDlwRCHOHZP_tX7jRYNxV8W8MpNEog45w&s" alt="404 error" class=" h-[6vh] rounded-[50%] md:h-[8vh] lg:h-[8vh] ">
+                </span>
+                <span class="relative inline-block rounded-full p-[3px] bg-gradient-to-r from-yellow-600 via-pink-600 to-purple-700 md:ml-1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRODzIoLcMnoD8WHRk_pOQT6XqEcKnKd1dNlw&s" alt="404 error" class=" h-[6vh] rounded-[50%] md:h-[8vh] lg:h-[8vh] ">
+                </span>
+                <span class="relative inline-block rounded-full p-[3px] bg-gradient-to-r from-yellow-600 via-pink-600 to-purple-700 md:ml-1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRODzIoLcMnoD8WHRk_pOQT6XqEcKnKd1dNlw&s" class=" h-[6vh] rounded-[50%] md:h-[8vh] lg:h-[8vh] ">
+                </span>
+                <span class="relative inline-block rounded-full p-[3px] bg-gradient-to-r from-yellow-600 via-pink-600 to-purple-700 md:ml-1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS--M8Sdn4eBEsPwCF79YpVdSvL8fmczI701w&s" alt="404 error" class=" h-[6vh] rounded-[50%] object-cover  md:h-[8vh] lg:h-[8vh] ">
+                </span>
+                <span class="relative inline-block rounded-full p-[3px] bg-gradient-to-r from-yellow-600 via-pink-600 to-purple-700 md:ml-1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS--M8Sdn4eBEsPwCF79YpVdSvL8fmczI701w&s" alt="404 error" class=" h-[6vh] rounded-[50%] object-cover  md:h-[8vh] lg:h-[8vh] ">
+                </span>
+                <span class="relative inline-block rounded-full p-[3px] bg-gradient-to-r from-yellow-600 via-pink-600 to-purple-700 md:ml-1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS--M8Sdn4eBEsPwCF79YpVdSvL8fmczI701w&s" alt="404 error" class=" h-[6vh] rounded-[50%] object-cover  md:h-[8vh] lg:h-[8vh] ">
+                </span>
+                <span class="relative inline-block rounded-full p-[3px] bg-gradient-to-r from-yellow-600 via-pink-600 to-purple-700 md:ml-1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS--M8Sdn4eBEsPwCF79YpVdSvL8fmczI701w&s" alt="404 error" class=" h-[6vh] rounded-[50%] object-cover  md:h-[8vh] lg:h-[8vh] ">
+                </span>
+                <span class="relative inline-block rounded-full p-[3px] bg-gradient-to-r from-yellow-600 via-pink-600 to-purple-700 md:ml-1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS--M8Sdn4eBEsPwCF79YpVdSvL8fmczI701w&s" alt="404 error" class=" h-[6vh] rounded-[50%] object-cover  md:h-[8vh] lg:h-[8vh] ">
+                </span>
+                <span class="relative inline-block rounded-full p-[3px] bg-gradient-to-r from-yellow-600 via-pink-600 to-purple-700 md:ml-1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS--M8Sdn4eBEsPwCF79YpVdSvL8fmczI701w&s" alt="404 error" class=" h-[6vh] rounded-[50%] object-cover  md:h-[8vh] lg:h-[8vh] ">
+                </span>
+                <span class="relative inline-block rounded-full p-[3px] bg-gradient-to-r from-yellow-600 via-pink-600 to-purple-700 md:ml-1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS--M8Sdn4eBEsPwCF79YpVdSvL8fmczI701w&s" alt="404 error" class=" h-[6vh] rounded-[50%] object-cover  md:h-[8vh] lg:h-[8vh] ">
+                </span>
+                <span class="relative inline-block rounded-full p-[3px] bg-gradient-to-r from-yellow-600 via-pink-600 to-purple-700 md:ml-1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS--M8Sdn4eBEsPwCF79YpVdSvL8fmczI701w&s" alt="404 error" class=" h-[6vh] rounded-[50%] object-cover  md:h-[8vh] lg:h-[8vh] ">
+                </span>
+                <span class="relative inline-block rounded-full p-[3px] bg-gradient-to-r from-yellow-600 via-pink-600 to-purple-700 md:ml-1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS--M8Sdn4eBEsPwCF79YpVdSvL8fmczI701w&s" alt="404 error" class=" h-[6vh] rounded-[50%] object-cover  md:h-[8vh] lg:h-[8vh]">
+                </span>
+            </section>
+            
+            <div class=" text-white bg-black text-[3vw] md:ml-[52px] md:pl-20 md:pr-20 md:pt-3 lg:pl-60 lg:pr-44 xl:pl-[450px] ">
+                <span class="flex items-center justify-between">
+                    <span class="flex items-center">
+
+                    
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQvVahWtJONHK4s5wrzZqd-p8QD-4lPUv1qQ&s" alt="404 error" class=" h-[4vh] w-[24px] rounded-[50%] ml-2 md:h-[4vh] md:rounded-[50%] md:w-[4vw] lg:h-[3vh] lg:w-[2vw]">
+                    <p class="flex items-center ml-2 md:font-[600px] text-[14px]">
+                        peak_pixel
+                        <svg
+                            class="ml-2 lg:hidden"
+                            width="5"
+                            height="5"
+                            viewBox="0 0 10 10"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <circle
+                                cx="5"
+                                cy="5"
+                                r="5"
+                                fill="grey"
+                            />
+                        </svg>
+                    </p>
+                    <p class=" text-blue-500 ml-2 font-bold text-xs  md:font-[600px] md:text-[14px] lg:hidden">Follow</p>
+                </span>
+                    <svg
+                        class=" md:ml-[338px] lg:ml-[370px] xl:ml-[24vw] mx-4"
+                        width="20"
+                        height="5"
+                        viewBox="0 0 24 8"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <circle
+                            cx="4"
+                            cy="4"
+                            r="3"
+                            fill="white"
+                        />
+                        <circle
+                            cx="12"
+                            cy="4"
+                            r="3"
+                            fill="white"
+                        />
+                        <circle
+                            cx="20"
+                            cy="4"
+                            r="3"
+                            fill="white"
+                        />
+                    </svg>
+                </span>
+                <div>
+                    <img src="scenery.jpg" class=" h-[58vh] w-[100vw] object-cover mt-[10px] lg:h-[42vh] lg:w-[50vw] xl:h-auto xl:w-[35vw]">
+                    <span class="flex mt-3">
+                        <svg
+                            class=" ml-3"
+                            aria-label="Like"
+                            class="x1lliihq x1n2onr6 xyb1xck"
+                            fill="currentColor"
+                            height="24"
+                            role="img"
+                            viewBox="0 0 24 24"
+                            width="24"
+                        >
+                            <title>Like</title>
+                            <path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z"></path>
+                        </svg>
+                        <svg
+                            class=" ml-3"
+                            aria-label="Comment"
+                            class="x1lliihq x1n2onr6 x5n08af"
+                            fill="currentColor"
+                            height="24"
+                            role="img"
+                            viewBox="0 0 24 24"
+                            width="24"
+                        >
+                            <title>Comment</title>
+                            <path
+                                d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                            ></path>
+                            <title>Comment</title>
+                            <path
+                                d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                            ></path>
+                        </svg>
+                        <svg
+                            class=" ml-3"
+                            aria-label="Share"
+                            class="x1lliihq x1n2onr6 xyb1xck"
+                            fill="currentColor"
+                            height="24"
+                            role="img"
+                            viewBox="0 0 24 24"
+                            width="24"
+                        >
+                            <title>Share</title>
+                            <line
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                x1="22"
+                                x2="9.218"
+                                y1="3"
+                                y2="10.083"
+                            ></line>
+                            <polygon
+                                fill="none"
+                                points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334"
+                                stroke="currentColor"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                            ></polygon>
+                        </svg>
+                        <svg
+                            class=" ml-73 mr-3 md:ml-[408px] lg:ml-[370px] xl:ml-[24vw]"
+                            aria-label="Save"
+                            class="x1lliihq x1n2onr6 x5n08af"
+                            fill="currentColor"
+                            height="24"
+                            role="img"
+                            viewBox="0 0 24 24"
+                            width="24"
+                        >
+                            <title>Save</title>
+                            <polygon
+                                fill="none"
+                                points="20 21 12 13.44 4 21 4 3 20 3 20 21"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                            ></polygon>
+                        </svg>
+                    </span>
+                    <p class=" ml-3 mt-2 font-bold md:font-[600px] text-[14px] lg:font-[600] ">14,866 likes</p>
+                    <span class="flex text-[14px] ml-3 lg:w-[48vw] xl:w-[33vw]">
+                        <p> 
+                            <span class=" font-bold ">peak.pixel_</span>
+                            "Where nature paints its masterpiece, every view is a work of art."
+
+                     #NaturePhotography #LandscapeLovers #ScenicViews #Wanderlust #EarthFocus #NaturePerfection #MotherNature #ExploreMore #WildBeauty #OutdoorLife #AdventureAwaits #NatureGram #CaptureTheMoment #TravelPhotography #SereneScenery
+                        </p>
+                    </span>
+                </div>
+            </div>
+            <div class=" text-white bg-black text-[3vw] pt-6 md:ml-[52px] md:pl-20 md:pr-20  lg:pl-60 lg:pr-44 xl:pl-[450px]">
+                <span class="flex items-center">
+                    <img src="https://i.pinimg.com/1200x/09/da/45/09da45ccd7d432488eee98d75ef4b783.jpg" alt="404 error" class=" h-[4vh] w-[24px] rounded-[50%] ml-2 md:h-[4vh] md:rounded-[50%] md:w-[4vw] lg:h-[3vh] lg:w-[2vw]">
+                    <p class="flex items-center ml-2 md:font-[600px] text-[14px]">
+                        Moments_Asmit
+                        <svg
+                            class=" ml-2 lg:hidden"
+                            width="5"
+                            height="5"
+                            viewBox="0 0 10 10"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <circle
+                                cx="5"
+                                cy="5"
+                                r="5"
+                                fill="grey"
+                            />
+                        </svg>
+                    </p>
+                    <p class=" text-blue-500 ml-2 font-bold text-xs lg:hidden">Follow</p>
+                    <svg
+                        class="ml-43 md:ml-[298px]  lg:ml-[340px] xl:ml-[22vw]"
+                        width="20"
+                        height="5"
+                        viewBox="0 0 24 8"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <circle
+                            cx="4"
+                            cy="4"
+                            r="3"
+                            fill="white"
+                        />
+                        <circle
+                            cx="12"
+                            cy="4"
+                            r="3"
+                            fill="white"
+                        />
+                        <circle
+                            cx="20"
+                            cy="4"
+                            r="3"
+                            fill="white"
+                        />
+                    </svg>
+                </span>
+                <div>
+                    <img src="data:image/jpeg;base64,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" class=" h-[58vh] w-[100vw] object-cover mt-[10px] lg:h-[42vh] lg:w-[50vw] xl:h-[60vh] xl:w-[35vw]">
+                    <span class="flex mt-3">
+                        <svg
+                            class=" ml-3"
+                            aria-label="Like"
+                            class="x1lliihq x1n2onr6 xyb1xck"
+                            fill="currentColor"
+                            height="24"
+                            role="img"
+                            viewBox="0 0 24 24"
+                            width="24"
+                        >
+                            <title>Like</title>
+                            <path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z"></path>
+                        </svg>
+                        <svg
+                            class=" ml-3"
+                            aria-label="Comment"
+                            class="x1lliihq x1n2onr6 x5n08af"
+                            fill="currentColor"
+                            height="24"
+                            role="img"
+                            viewBox="0 0 24 24"
+                            width="24"
+                        >
+                            <title>Comment</title>
+                            <path
+                                d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                            ></path>
+                            <title>Comment</title>
+                            <path
+                                d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                            ></path>
+                        </svg>
+                        <svg
+                            class=" ml-3"
+                            aria-label="Share"
+                            class="x1lliihq x1n2onr6 xyb1xck"
+                            fill="currentColor"
+                            height="24"
+                            role="img"
+                            viewBox="0 0 24 24"
+                            width="24"
+                        >
+                            <title>Share</title>
+                            <line
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                x1="22"
+                                x2="9.218"
+                                y1="3"
+                                y2="10.083"
+                            ></line>
+                            <polygon
+                                fill="none"
+                                points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334"
+                                stroke="currentColor"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                            ></polygon>
+                        </svg>
+                        <svg
+                            class=" ml-70 md:ml-[408px] lg:ml-[370px] xl:ml-[24vw]"
+                            aria-label="Save"
+                            class="x1lliihq x1n2onr6 x5n08af"
+                            fill="currentColor"
+                            height="24"
+                            role="img"
+                            viewBox="0 0 24 24"
+                            width="24"
+                        >
+                            <title>Save</title>
+                            <polygon
+                                fill="none"
+                                points="20 21 12 13.44 4 21 4 3 20 3 20 21"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                            ></polygon>
+                        </svg>
+                    </span>
+                    <p class=" ml-3 mt-2 font-bold md:font-[600px] text-[14px] lg:font-[600]">50,126 likes</p>
+                    <span class="flex text-[14px] ml-3 lg:w-[487px] xl:w-[33vw]">
+                        <p> 
+                            <span class=" font-bold ">Moments_Asmit</span>
+                            🌿 "Lost in the beauty of nature, found in its serenity."
+
+                     #NaturePhotography #LandscapeLovers #ScenicViews #Wanderlust #EarthFocus #NaturePerfection #MotherNature #ExploreMore #WildBeauty #OutdoorLife #AdventureAwaits #NatureGram #CaptureTheMoment #TravelPhotography #SereneScenery
+                        </p>
+                    </span>
+                </div>
+            </div>
+            <div class=" text-white bg-black text-[3vw] pt-6 md:ml-[52px] md:pl-20 md:pr-20 lg:pl-60 lg:pr-44 xl:pl-[450px]">
+                <span class="flex items-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7__AYALUiCLxKF5perbqGZdn56Oxycl2B0Q&s" alt="404 error" class=" h-[4vh] w-[24px]] rounded-[50%] ml-2 md:h-[4vh] md:rounded-[50%] md:w-[4vw] lg:h-[3vh] lg:w-[2vw]">
+                    <p class="flex items-center ml-2 md:font-[600px] text-[14px]">
+                        thunder_blood_9
+                        <svg
+                            class=" ml-2 lg:hidden "
+                            width="5"
+                            height="5"
+                            viewBox="0 0 10 10"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <circle
+                                cx="5"
+                                cy="5"
+                                r="5"
+                                fill="grey"
+                            />
+                        </svg>
+                    </p> 
+                    <p class=" text-blue-500 ml-2 font-bold text-xs lg:hidden">Follow</p>
+                    <svg
+                        class="ml-42 md:ml-[298px] lg:ml-[330px] xl:ml-[21vw]"
+                        width="20"
+                        height="5"
+                        viewBox="0 0 24 8"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <circle
+                            cx="4"
+                            cy="4"
+                            r="3"
+                            fill="white"
+                        />
+                        <circle
+                            cx="12"
+                            cy="4"
+                            r="3"
+                            fill="white"
+                        />
+                        <circle
+                            cx="20"
+                            cy="4"
+                            r="3"
+                            fill="white"
+                        />
+                    </svg>
+                </span>
+                <div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvFAO85i_zS0sDQIzUnj5_0GWwTtxeWpyMnw&s" class=" h-[58vh] w-[100vw] object-cover mt-[10px] lg:h-[42vh] lg:w-[50vw] xl:h-auto xl:w-[35vw] ">
+                    <span class="flex mt-3">
+                        <svg
+                            class=" ml-3"
+                            aria-label="Like"
+                            class="x1lliihq x1n2onr6 xyb1xck"
+                            fill="currentColor"
+                            height="24"
+                            role="img"
+                            viewBox="0 0 24 24"
+                            width="24"
+                        >
+                            <title>Like</title>
+                            <path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z"></path>
+                        </svg>
+                        <svg
+                            class=" ml-3"
+                            aria-label="Comment"
+                            class="x1lliihq x1n2onr6 x5n08af"
+                            fill="currentColor"
+                            height="24"
+                            role="img"
+                            viewBox="0 0 24 24"
+                            width="24"
+                        >
+                            <title>Comment</title>
+                            <path
+                                d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                            ></path>
+                            <title>Comment</title>
+                            <path
+                                d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                            ></path>
+                        </svg>
+                        <svg
+                            class=" ml-3"
+                            aria-label="Share"
+                            class="x1lliihq x1n2onr6 xyb1xck"
+                            fill="currentColor"
+                            height="24"
+                            role="img"
+                            viewBox="0 0 24 24"
+                            width="24"
+                        >
+                            <title>Share</title>
+                            <line
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                x1="22"
+                                x2="9.218"
+                                y1="3"
+                                y2="10.083"
+                            ></line>
+                            <polygon
+                                fill="none"
+                                points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334"
+                                stroke="currentColor"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                            ></polygon>
+                        </svg>
+                        <svg
+                            class=" ml-70 md:ml-[408px] lg:ml-[360px] xl:ml-[24vw]"
+                            aria-label="Save"
+                            class="x1lliihq x1n2onr6 x5n08af"
+                            fill="currentColor"
+                            height="24"
+                            role="img"
+                            viewBox="0 0 24 24"
+                            width="24"
+                        >
+                            <title>Save</title>
+                            <polygon
+                                fill="none"
+                                points="20 21 12 13.44 4 21 4 3 20 3 20 21"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                            ></polygon>
+                        </svg>
+                    </span>
+                    <p class=" ml-3 mt-2 font-bold md:font-[600px] text-[14px] lg:font-[600]">11,760 likes</p>
+                    <span class="flex text-[14px] ml-3 lg:w-[486px] xl:w-[33vw]">
+                        <p>
+                            <span class=" font-bold ">thunder_blood_9</span>
+                            🌊 "Nature’s whisper is louder than words."
+
+                     #NaturePhotography #LandscapeLovers #ScenicViews #Wanderlust #EarthFocus #NaturePerfection #MotherNature #ExploreMore #WildBeauty #OutdoorLife #AdventureAwaits #NatureGram #CaptureTheMoment #TravelPhotography #SereneScenery
+                        </p>
+                    </span>
+                </div>
+            </div>
+            <div class=" text-white bg-black text-[3vw] pt-6 md:ml-[52px] md:pl-20 md:pr-20 lg:pl-60 lg:pr-44 xl:pl-[450px]">
+                <span class="flex items-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTirihSaNjTjN4iFZFTht3bo4pLhvc0eFYPA&s" alt="404 error" class=" h-[4vh] w-[24px] rounded-[50%] ml-2 md:h-[4vh] md:rounded-[50%] md:w-[4vw] lg:h-[3vh] lg:w-[2vw]">
+                    <p class="flex items-center ml-2 md:font-[600px] text-[14px]">
+                        nature_lap
+                        <svg
+                            class=" ml-2 lg:hidden"
+                            width="5"
+                            height="5"
+                            viewBox="0 0 10 10"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <circle
+                                cx="5"
+                                cy="5"
+                                r="5"
+                                fill="grey"
+                            />
+                        </svg>
+                    </p>
+                    <p class=" text-blue-500 ml-2 font-bold text-xs lg:hidden">Follow</p>
+                    <svg
+                        class="ml-53 md:ml-[338px] lg:ml-[370px] xl:ml-[24vw]"
+                        width="20"
+                        height="5"
+                        viewBox="0 0 24 8"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <circle
+                            cx="4"
+                            cy="4"
+                            r="3"
+                            fill="white"
+                        />
+                        <circle
+                            cx="12"
+                            cy="4"
+                            r="3"
+                            fill="white"
+                        />
+                        <circle
+                            cx="20"
+                            cy="4"
+                            r="3"
+                            fill="white"
+                        />
+                    </svg>
+                </span>
+                <div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0qbkds_68lfrwRltUVpMgW-1kMgzSFBWBdQ&s" class=" h-[58vh] w-[100vw] object-cover mt-[10px] lg:h-[42vh] lg:w-[50vw] xl:h-[50vh] xl:w-[35vw]">
+                    <span class="flex mt-3">
+                        <svg
+                            class=" ml-3"
+                            aria-label="Like"
+                            class="x1lliihq x1n2onr6 xyb1xck"
+                            fill="currentColor"
+                            height="24"
+                            role="img"
+                            viewBox="0 0 24 24"
+                            width="24"
+                        >
+                            <title>Like</title>
+                            <path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z"></path>
+                        </svg>
+                        <svg
+                            class=" ml-3"
+                            aria-label="Comment"
+                            class="x1lliihq x1n2onr6 x5n08af"
+                            fill="currentColor"
+                            height="24"
+                            role="img"
+                            viewBox="0 0 24 24"
+                            width="24"
+                        >
+                            <title>Comment</title>
+                            <path
+                                d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                            ></path>
+                            <title>Comment</title>
+                            <path
+                                d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                            ></path>
+                        </svg>
+                        <svg
+                            class=" ml-3"
+                            aria-label="Share"
+                            class="x1lliihq x1n2onr6 xyb1xck"
+                            fill="currentColor"
+                            height="24"
+                            role="img"
+                            viewBox="0 0 24 24"
+                            width="24"
+                        >
+                            <title>Share</title>
+                            <line
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                x1="22"
+                                x2="9.218"
+                                y1="3"
+                                y2="10.083"
+                            ></line>
+                            <polygon
+                                fill="none"
+                                points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334"
+                                stroke="currentColor"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                            ></polygon>
+                        </svg>
+                        <svg
+                            class=" ml-70 md:ml-[408px] lg:ml-[370px] xl:ml-[24vw]"
+                            aria-label="Save"
+                            class="x1lliihq x1n2onr6 x5n08af"
+                            fill="currentColor"
+                            height="24"
+                            role="img"
+                            viewBox="0 0 24 24"
+                            width="24"
+                        >
+                            <title>Save</title>
+                            <polygon
+                                fill="none"
+                                points="20 21 12 13.44 4 21 4 3 20 3 20 21"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                            ></polygon>
+                        </svg>
+                    </span>
+                    <p class=" ml-3 mt-2 font-bold md:font-[600px] text-[14px] lg:font-[600]">12,012 likes</p>
+                    <span class="flex text-[14px] ml-3 lg:w-[486px] xl:w-[33vw]">
+                        <p>
+                            <span class=" font-bold ">nature_lap</span>
+                            "🍃 "Breathe in the wild air, exhale your worries."
+
+
+                     #NaturePhotography #LandscapeLovers #ScenicViews #Wanderlust #EarthFocus #NaturePerfection #MotherNature #ExploreMore #WildBeauty #OutdoorLife #AdventureAwaits #NatureGram #CaptureTheMoment #TravelPhotography #SereneScenery
+                        </p>
+                    </span>
+                </div>
+            </div>
+            <div class=" text-white bg-black text-[3vw] pt-6 md:ml-[52px] md:pl-20 md:pr-20 lg:pl-60 lg:pr-44 xl:pl-[450px]">
+                <span class="flex items-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoiH359Pmpd_9buQNQ81cci3TYGxZcussxwg&s" alt="404 error" class=" h-[4vh] w-[24px] rounded-[50%] ml-2 md:h-[4vh] md:rounded-[50%] md:w-[4vw] lg:h-[3vh] lg:w-[2vw]">
+                    <p class="flex items-center ml-2 md:font-[600px] text-[14px]">
+                        gupta_photography
+                        <svg
+                            class=" ml-2 lg:hidden"
+                            width="5"
+                            height="5"
+                            viewBox="0 0 10 10"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <circle
+                                cx="5"
+                                cy="5"
+                                r="5"
+                                fill="grey"
+                            />
+                        </svg>
+                    </p>
+                    <p class=" text-blue-500 ml-2 font-bold text-xs lg:hidden">Follow</p>
+                    <svg
+                        class="ml-38 md:ml-[280px] lg:ml-[310px] xl:ml-[20vw]"
+                        width="20"
+                        height="5"
+                        viewBox="0 0 24 8"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <circle
+                            cx="4"
+                            cy="4"
+                            r="3"
+                            fill="white"
+                        />
+                        <circle
+                            cx="12"
+                            cy="4"
+                            r="3"
+                            fill="white"
+                        />
+                        <circle
+                            cx="20"
+                            cy="4"
+                            r="3"
+                            fill="white"
+                        />
+                    </svg>
+                </span>
+                <div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq2FUAM9zOjhMY6Og8T87_1VOB3gxx3KAZPw&s" class=" h-[58vh] w-[100vw] object-cover mt-[10px] lg:h-[42vh] lg:w-[50vw] xl:h-[50vh] xl:w-[35vw]">
+                    <span class="flex mt-3">
+                        <svg
+                            class=" ml-3"
+                            aria-label="Like"
+                            class="x1lliihq x1n2onr6 xyb1xck"
+                            fill="currentColor"
+                            height="24"
+                            role="img"
+                            viewBox="0 0 24 24"
+                            width="24"
+                        >
+                            <title>Like</title>
+                            <path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z"></path>
+                        </svg>
+                        <svg
+                            class=" ml-3"
+                            aria-label="Comment"
+                            class="x1lliihq x1n2onr6 x5n08af"
+                            fill="currentColor"
+                            height="24"
+                            role="img"
+                            viewBox="0 0 24 24"
+                            width="24"
+                        >
+                            <title>Comment</title>
+                            <path
+                                d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                            ></path>
+                            <title>Comment</title>
+                            <path
+                                d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                            ></path>
+                        </svg>
+                        <svg
+                            class=" ml-3"
+                            aria-label="Share"
+                            class="x1lliihq x1n2onr6 xyb1xck"
+                            fill="currentColor"
+                            height="24"
+                            role="img"
+                            viewBox="0 0 24 24"
+                            width="24"
+                        >
+                            <title>Share</title>
+                            <line
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                x1="22"
+                                x2="9.218"
+                                y1="3"
+                                y2="10.083"
+                            ></line>
+                            <polygon
+                                fill="none"
+                                points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334"
+                                stroke="currentColor"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                            ></polygon>
+                        </svg>
+                        <svg
+                            class=" ml-70 md:ml-[408px] lg:ml-[370px] xl:ml-[24vw] "
+                            aria-label="Save"
+                            class="x1lliihq x1n2onr6 x5n08af "
+                            fill="currentColor"
+                            height="24"
+                            role="img"
+                            viewBox="0 0 24 24"
+                            width="24"
+                        >
+                            <title>Save</title>
+                            <polygon
+                                fill="none"
+                                points="20 21 12 13.44 4 21 4 3 20 3 20 21"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                            ></polygon>
+                        </svg>
+                    </span>
+                    <p class=" ml-3 mt-2 font-bold md:font-[600px] text-[14px] lg:font-[600]">8,166 likes</p>
+                    <span class="flex text-[14px] ml-3 lg:w-[440px] xl:w-[33vw]">
+                        <p>
+                            <span class=" font-bold ">gupta_photography</span>
+                            🌎 "Mother Nature never goes out of style."
+
+                     #NaturePhotography #LandscapeLovers #ScenicViews #Wanderlust #EarthFocus #NaturePerfection #MotherNature #ExploreMore #WildBeauty #OutdoorLife #AdventureAwaits #NatureGram #CaptureTheMoment #TravelPhotography #SereneScenery
+                        </p>
+                    </span>
+                </div>
+            </div>
+            <div class=" bg-black pt-10 flex flex-col items-center justify-center md:ml-[52px] ">
+                <img
+                    height="64"
+                    width="64"
+                    alt="Tick"
+                    class="xz74otr"
+                    referrerpolicy="origin-when-cross-origin"
+                    src="alldone.png"
+                    class=" bg-transparent"
+                >
+                <p class=" text-white text-[20px] font-sans font-[400px] pt-3 md:">You've completely caught up</p>
+                <p class=" text-gray-400 text-[14px] font-sans font-[400px]">You've seen all new posts from past 3 days.</p>
+            </div>
+            <div class="  text-white bg-black pt-10 pl-3 text-[14px] font-[600px] md:ml-[52px] md:pl-20 md:pr-20 lg:pl-60 lg:pr-44 xl:pl-[450px] ">
+                Suggested Post
+            </div>
+        </main>
+        <footer>
+            <ul class=" bg-black flex justify-around fixed bottom-0 w-full p-2 md:hidden ">
+                <li>
+                    <svg
+                        aria-label="Home"
+                        class="x1lliihq x1n2onr6 x5n08af text-white"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        viewBox="0 0 24 24"
+                        width="24"
+                    >
+                        <title>Home</title>
+                        <path d="M22 23h-6.001a1 1 0 0 1-1-1v-5.455a2.997 2.997 0 1 0-5.993 0V22a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V11.543a1.002 1.002 0 0 1 .31-.724l10-9.543a1.001 1.001 0 0 1 1.38 0l10 9.543a1.002 1.002 0 0 1 .31.724V22a1 1 0 0 1-1 1Z"></path>
+                    </svg>
+                </li>
+                <li>
+                    <svg
+                        aria-label="Explore"
+                        class="x1lliihq x1n2onr6 x5n08af text-white"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        viewBox="0 0 24 24"
+                        width="24"
+                    >
+                        <title>Explore</title>
+                        <path
+                            d="M19 10.5A8.5 8.5 0 1 1 10.5 2a8.5 8.5 0 0 1 8.5 8.5Z"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                        ></path>
+                        <line
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            x1="16.511"
+                            x2="22"
+                            y1="16.511"
+                            y2="22"
+                        ></line>
+                    </svg>
+                </li>
+                <li>
+                    <svg
+                        aria-label="Reels"
+                        class="x1lliihq x1n2onr6 x5n08af text-white"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        viewBox="0 0 24 24"
+                        width="24"
+                    >
+                        <title>Reels</title>
+                        <line
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            x1="2.049"
+                            x2="21.95"
+                            y1="7.002"
+                            y2="7.002"
+                        ></line>
+                        <line
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            x1="13.504"
+                            x2="16.362"
+                            y1="2.001"
+                            y2="7.002"
+                        ></line>
+                        <line
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            x1="7.207"
+                            x2="10.002"
+                            y1="2.11"
+                            y2="7.002"
+                        ></line>
+                        <path
+                            d="M2 12.001v3.449c0 2.849.698 4.006 1.606 4.945.94.908 2.098 1.607 4.946 1.607h6.896c2.848 0 4.006-.699 4.946-1.607.908-.939 1.606-2.096 1.606-4.945V8.552c0-2.848-.698-4.006-1.606-4.945C19.454 2.699 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.546 2 5.704 2 8.552Z"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                        ></path>
+                        <path d="M9.763 17.664a.908.908 0 0 1-.454-.787V11.63a.909.909 0 0 1 1.364-.788l4.545 2.624a.909.909 0 0 1 0 1.575l-4.545 2.624a.91.91 0 0 1-.91 0Z" fill-rule="evenodd"></path>
+                    </svg>
+                </li>
+                <li>
+                    <svg
+                        aria-label="Messenger"
+                        class="x1lliihq x1n2onr6 x5n08af text-white"
+                        fill="currentColor"
+                        height="24"
+                        role="img"
+                        viewBox="0 0 24 24"
+                        width="24"
+                    >
+                        <title>Messenger</title>
+                        <path
+                            d="M12.003 2.001a9.705 9.705 0 1 1 0 19.4 10.876 10.876 0 0 1-2.895-.384.798.798 0 0 0-.533.04l-1.984.876a.801.801 0 0 1-1.123-.708l-.054-1.78a.806.806 0 0 0-.27-.569 9.49 9.49 0 0 1-3.14-7.175 9.65 9.65 0 0 1 10-9.7Z"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-miterlimit="10"
+                            stroke-width="1.739"
+                        ></path>
+                        <path d="M17.79 10.132a.659.659 0 0 0-.962-.873l-2.556 2.05a.63.63 0 0 1-.758.002L11.06 9.47a1.576 1.576 0 0 0-2.277.42l-2.567 3.98a.659.659 0 0 0 .961.875l2.556-2.049a.63.63 0 0 1 .759-.002l2.452 1.84a1.576 1.576 0 0 0 2.278-.42Z" fill-rule="evenodd"></path>
+                    </svg>
+                </li>
+                <li>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQvVahWtJONHK4s5wrzZqd-p8QD-4lPUv1qQ&s" alt="404 error" class=" h-[3vh] w-[6vw] rounded-[50%]">
+                </li>
+            </ul>
+        </footer>
+    </body>
+</html>
